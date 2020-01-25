@@ -1,5 +1,6 @@
 package dev.abhinav;
 
+import dev.abhinav.game.Game;
 import dev.abhinav.interfaces.NumberGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,9 +19,19 @@ public class Main {
 
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(CONFIG_LOCATION);
 
+        // Get "numberGenerator" from the Spring Context
         NumberGenerator numGen = context.getBean("numberGenerator", NumberGenerator.class);
 
         log.info(" Random number = {} " ,numGen.next() );
+
+        // Get "game" from the Spring Context
+        Game game = context.getBean("game", Game.class);
+
+        // Reset the game.
+        game.reset();
+
+        log.info("Game Initialized. ");
+
 
         context.close();
 

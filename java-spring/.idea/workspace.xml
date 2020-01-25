@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8eea4668-f19c-48c2-8df2-db4569d4529a" name="Default Changelist" comment="" />
+    <list default="true" id="8eea4668-f19c-48c2-8df2-db4569d4529a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mod-core/src/main/java/dev/abhinav/NumberGeneratorImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mod-core/src/main/java/dev/abhinav/interfaces/NumberGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mod-core/src/main/resources/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-spring.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod-core/src/main/java/dev/abhinav/CoreModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/mod-core/src/main/java/dev/abhinav/others/CoreModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod-core/src/main/java/dev/abhinav/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mod-core/src/main/java/dev/abhinav/others/Helper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod-core/src/main/java/dev/abhinav/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/mod-core/src/main/java/dev/abhinav/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod-core/target/classes/dev/abhinav/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/mod-core/target/classes/dev/abhinav/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod-core/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mod-core/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/mod-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod-core/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mod-core/target/mod-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mod-core/target/mod-core-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +41,8 @@
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="1.8" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
@@ -34,13 +55,28 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
     </option>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -49,7 +85,7 @@
       <module name="java-spring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.abhinav.*" />
+          <option name="PATTERN" value="dev.abhinav.others.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -62,7 +98,7 @@
       <module name="mod-core" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.abhinav.*" />
+          <option name="PATTERN" value="dev.abhinav.others.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,16 +114,6 @@
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
     <option name="showServicesTree" value="false" />
   </component>
   <component name="SvnConfiguration">
@@ -104,11 +130,28 @@
       <workItem from="1579871556700" duration="1968000" />
       <workItem from="1579915035241" duration="6821000" />
       <workItem from="1579945323834" duration="596000" />
+      <workItem from="1579965755461" duration="3321000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
     <state width="1493" height="240" key="GridCell.Tab.0.bottom" timestamp="1579945216987">

@@ -10,5 +10,7 @@ public class Main {
     public static void main(String[] args) {
 
         log.info("Hello from mod-core:Main class");
+        log.debug("Hello from mod-core:Main class");
+
     }
 }

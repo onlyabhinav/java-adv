@@ -1,5 +1,7 @@
 package dev.abhinav;
 
+import dev.abhinav.circulardependency.DemoClassA;
+import dev.abhinav.circulardependency.DemoClassB;
 import dev.abhinav.game.Game;
 import dev.abhinav.interfaces.NumberGenerator;
 import org.slf4j.Logger;
@@ -32,7 +34,16 @@ public class Main {
 
         log.info("Game Initialized. ");
 
+        // Circular Dependency
 
+        DemoClassA demoClassA = context.getBean("demoClassA", DemoClassA.class);
+        log.info("Circular Depedency [demoClassA] = {}", demoClassA.sayHello() );
+
+        DemoClassB demoClassB = context.getBean("demoClassB", DemoClassB.class);
+        log.info("Circular Depedency [demoClassB] = {}", demoClassB.sayHello() );
+
+
+        // Close Spring context
         context.close();
 
     }

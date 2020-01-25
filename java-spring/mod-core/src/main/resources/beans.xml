@@ -20,4 +20,23 @@
     -->
 
 
+    <!--Circular Depedency-->
+
+    <bean id="demoClassA" class="dev.abhinav.circulardependency.DemoClassAImpl">
+
+        <!-- Circular Depenency Initialized Succesfully when we use PROPERTY Injection-->
+        <property name="demoClassB" ref="demoClassB"/>
+
+<!--        <constructor-arg ref="demoClassB"/>-->
+        <!-- ERROR when used CONSTRUCTOR INJECTION - BeanCurrentlyInCreationException:
+        Error creating bean with name 'demoClassA': Requested bean is
+        currently in creation: Is there an unresolvable circular reference? -->
+    </bean>
+    <bean id="demoClassB" class="dev.abhinav.circulardependency.DemoClassBImpl">
+        <!--<property name="demoClassA" ref="demoClassA"/>-->
+
+
+        <constructor-arg ref="demoClassA"/>
+    </bean>
+
 </beans>

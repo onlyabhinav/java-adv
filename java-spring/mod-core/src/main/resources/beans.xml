@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="numberGenerator" class="dev.abhinav.NumberGeneratorImpl"/>
+
+    <!-- Initializing 'numberGenerator' with Setter injection -->
+    <bean id="game" class="dev.abhinav.game.GameImpl">
+        <property name="numberGenerator" ref="numberGenerator"/>
+    </bean>
+
+    <!-- Initializing 'numberGenerator' with Constructor Argument -->
+    <!--
+    <bean id="game" class="dev.abhinav.game.GameImpl">
+        <constructor-arg ref = "numberGenerator"/>
+    </bean>
+    -->
+
+
+    <!--Circular Depedency-->
+
+    <bean id="demoClassA" class="dev.abhinav.circulardependency.DemoClassAImpl">
+
+        <!-- Circular Depenency Initialized Succesfully when we use PROPERTY Injection-->
+        <property name="demoClassB" ref="demoClassB"/>
+
+<!--        <constructor-arg ref="demoClassB"/>-->
+        <!-- ERROR when used CONSTRUCTOR INJECTION - BeanCurrentlyInCreationException:
+        Error creating bean with name 'demoClassA': Requested bean is
+        currently in creation: Is there an unresolvable circular reference? -->
+    </bean>
+    <bean id="demoClassB" class="dev.abhinav.circulardependency.DemoClassBImpl">
+        <!--<property name="demoClassA" ref="demoClassA"/>-->
+
+
+        <constructor-arg ref="demoClassA"/>
+    </bean>
+
+</beans>

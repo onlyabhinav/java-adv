@@ -1,5 +1,6 @@
 package dev.abhinav;
 
+import dev.abhinav.beancycle.BeanCycle;
 import dev.abhinav.circulardependency.DemoClassA;
 import dev.abhinav.circulardependency.DemoClassB;
 import dev.abhinav.game.Game;
@@ -41,6 +42,11 @@ public class Main {
 
         DemoClassB demoClassB = context.getBean("demoClassB", DemoClassB.class);
         log.info("Circular Depedency [demoClassB] = {}", demoClassB.sayHello() );
+
+        // Bean Lifecycle
+
+        BeanCycle beanCycle = context.getBean("beanCycle", BeanCycle.class);
+        log.info("BeanCycle initialized :: {}", beanCycle.showOnInit());
 
 
         // Close Spring context

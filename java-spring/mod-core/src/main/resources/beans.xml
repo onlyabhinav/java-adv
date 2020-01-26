@@ -34,9 +34,11 @@
     </bean>
     <bean id="demoClassB" class="dev.abhinav.circulardependency.DemoClassBImpl">
         <!--<property name="demoClassA" ref="demoClassA"/>-->
-
-
         <constructor-arg ref="demoClassA"/>
     </bean>
+
+    <!-- Bean LifeCycle -->
+    <bean id="beanCycle" class="dev.abhinav.beancycle.BeanCycleImpl" init-method="showOnInit"
+          destroy-method="showOnDestroy"/>
 
 </beans>

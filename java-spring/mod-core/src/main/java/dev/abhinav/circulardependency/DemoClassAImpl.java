@@ -27,4 +27,16 @@ public class DemoClassAImpl implements DemoClassA {
 
         return "Hello from A";
     }
+
+    public String showOnInit() {
+
+        log.info("ON_INIT");
+
+        return "INITIALIZED";
+    }
+
+    public String showOnDestroy() {
+        log.info("ON_DESTROY");
+        return "";
+    }
 }

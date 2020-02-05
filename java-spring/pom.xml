@@ -39,11 +39,11 @@
             </dependency>
 
             <!-- annotation API -->
-            <dependency>
+            <!--<dependency>
                 <groupId>javax.annotation</groupId>
                 <artifactId>javax.annotation-api</artifactId>
                 <version>${annotation.api.version}</version>
-            </dependency>
+            </dependency>-->
 
 
         </dependencies>

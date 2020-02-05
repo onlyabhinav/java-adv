@@ -3,12 +3,15 @@ package dev.abhinav.game;
 import dev.abhinav.interfaces.NumberGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class GameImpl implements Game {
     // == constants ==
     private static final Logger log = LoggerFactory.getLogger(GameImpl.class);
 
     // == fields ==
+
+    @Autowired
     private NumberGenerator numberGenerator;
     private int guessCount = 10;
     private int number;

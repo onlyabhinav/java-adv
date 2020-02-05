@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        https://www.springframework.org/schema/beans/spring-beans.xsd"
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd"
        default-init-method="showOnInit" default-destroy-method="showOnDestroy">
 
+    <!--for annotation based configuration-->
+    <!-- this is required >> xmlns:context="http://www.springframework.org/schema/context" -->
+    <context:annotation-config/>
 
     <bean id="numberGenerator" class="dev.abhinav.NumberGeneratorImpl"/>
 
     <!-- Initializing 'numberGenerator' with Setter injection -->
     <bean id="game" class="dev.abhinav.game.GameImpl">
-        <property name="numberGenerator" ref="numberGenerator"/>
+        <!--<property name="numberGenerator" ref="numberGenerator"/>-->
     </bean>
 
     <!-- Initializing 'numberGenerator' with Constructor Argument -->
@@ -43,6 +49,6 @@
           destroy-method="showOnDestroy"/>
 
 
-    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+    <!--    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>-->
 
 </beans>

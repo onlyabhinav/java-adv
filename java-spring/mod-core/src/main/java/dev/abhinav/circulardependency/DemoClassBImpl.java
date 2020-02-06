@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-public class DemoClassBImpl implements DemoClassB {
+public class  DemoClassBImpl implements DemoClassB {
     private static final Logger log = LoggerFactory.getLogger(DemoClassBImpl.class);
 
     private DemoClassA demoClassA;

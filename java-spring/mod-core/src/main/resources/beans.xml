@@ -12,6 +12,7 @@
     <!-- this is required >> xmlns:context="http://www.springframework.org/schema/context" -->
     <context:annotation-config/>
 
+    <!-- both can work together-->
     <context:component-scan base-package="dev.abhinav.autoscancomponents"/>
 
     <bean id="numberGenerator" class="dev.abhinav.NumberGeneratorImpl"/>

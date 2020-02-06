@@ -1,5 +1,7 @@
 package dev.abhinav;
 
+import dev.abhinav.autoscancomponents.Employee;
+import dev.abhinav.autoscancomponents.EmployeeImpl;
 import dev.abhinav.beancycle.BeanCycle;
 import dev.abhinav.circulardependency.DemoClassA;
 import dev.abhinav.circulardependency.DemoClassB;
@@ -38,16 +40,27 @@ public class Main {
         // Circular Dependency
 
         DemoClassA demoClassA = context.getBean("demoClassA", DemoClassA.class);
-        log.info("Circular Depedency [demoClassA] = {}", demoClassA.sayHello() );
+        log.info("Circular Depedency [demoClassA] = {}", demoClassA.sayHello());
 
         DemoClassB demoClassB = context.getBean("demoClassB", DemoClassB.class);
-        log.info("Circular Depedency [demoClassB] = {}", demoClassB.sayHello() );
+        log.info("Circular Depedency [demoClassB] = {}", demoClassB.sayHello());
 
         // Bean Lifecycle
 
         BeanCycle beanCycle = context.getBean("beanCycle", BeanCycle.class);
         log.info("BeanCycle initialized :: {}", beanCycle.showOnInit());
 
+        //Employee scannedComponent = context.getBean(Employee.class);      // this works (thru interface)
+        Employee scannedComponent = context.getBean(EmployeeImpl.class);    // this also works
+
+        log.info("Checking Auto Components.. ");
+        log.info("[1] => scannedComponent initialized :: {}", scannedComponent.getEmpDetails());
+
+        Employee scannedComponentByName = context.getBean("employeeBean", EmployeeImpl.class); // Employee.class also works
+        log.info("[2] => scannedComponentByName initialized :: {}", scannedComponentByName.getEmpDetails());
+
+
+        log.info("COMPLETING EXECUTION.. ");
 
         // Close Spring context
         context.close();

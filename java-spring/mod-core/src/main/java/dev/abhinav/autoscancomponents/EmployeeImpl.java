@@ -3,10 +3,10 @@ package dev.abhinav.autoscancomponents;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("employeeBean")
 public class EmployeeImpl implements Employee {
     private int empID = 0;
-    private String empName = null;
+    private String empName = "default_name";
 
     @Override
     public String getEmpDetails() {

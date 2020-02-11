@@ -13,6 +13,16 @@
 
 
     <dependencies>
+
+        <dependency>
+            <groupId>dev.abhinav</groupId>
+            <artifactId>mod-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- Can define dependencies like below OR dependency -->
+
+        <!--
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
@@ -21,12 +31,12 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
         </dependency>
-
+-->
         <!-- annotation API       -->
-        <dependency>
+        <!--<dependency>
             <groupId>javax.annotation</groupId>
             <artifactId>javax.annotation-api</artifactId>
-        </dependency>
+        </dependency>-->
 
 
     </dependencies>

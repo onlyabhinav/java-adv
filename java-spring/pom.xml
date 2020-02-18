@@ -11,6 +11,7 @@
     <modules>
         <module>mod-core</module>
         <module>mod-autoconfig</module>
+        <module>mod-appevents</module>
     </modules>
 
     <properties>

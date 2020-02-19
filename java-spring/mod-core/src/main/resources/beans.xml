@@ -15,7 +15,7 @@
     <!-- both can work together-->
     <context:component-scan base-package="dev.abhinav.autoscancomponents"/>
 
-    <bean id="numberGenerator" class="dev.abhinav.NumberGeneratorImpl"/>
+    <bean id="numberGenerator" class="dev.abhinav.game.NumberGeneratorImpl"/>
 
     <!-- Initializing 'numberGenerator' with Setter injection -->
     <bean id="game" class="dev.abhinav.game.GameImpl">

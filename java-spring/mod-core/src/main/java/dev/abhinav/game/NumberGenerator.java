@@ -1,4 +1,4 @@
-package dev.abhinav.interfaces;
+package dev.abhinav.game;
 
 public interface NumberGenerator {
 

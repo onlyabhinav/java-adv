@@ -1,20 +1,18 @@
-package dev.abhinav;
-
 import dev.abhinav.autoscancomponents.Employee;
 import dev.abhinav.autoscancomponents.EmployeeImpl;
 import dev.abhinav.beancycle.BeanCycle;
 import dev.abhinav.circulardependency.DemoClassA;
 import dev.abhinav.circulardependency.DemoClassB;
 import dev.abhinav.game.Game;
-import dev.abhinav.interfaces.NumberGenerator;
+import dev.abhinav.game.NumberGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Main {
+public class MainCoreApp {
 
-    private static final Logger log = LoggerFactory.getLogger(Main.class);
+    private static final Logger log = LoggerFactory.getLogger(MainCoreApp.class);
 
     private static final String CONFIG_LOCATION = "beans.xml";
 

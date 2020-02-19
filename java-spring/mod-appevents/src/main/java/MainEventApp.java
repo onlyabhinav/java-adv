@@ -9,5 +9,8 @@ public class MainEventApp {
 
         ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
+
+        //NumberGenerator numberGenerator = context.get
+
     }
 }

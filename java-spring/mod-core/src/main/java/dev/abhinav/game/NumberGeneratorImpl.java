@@ -1,16 +1,18 @@
-package dev.abhinav;
+package dev.abhinav.game;
 
-import dev.abhinav.interfaces.NumberGenerator;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Random;
 
 public class NumberGeneratorImpl implements NumberGenerator {
 
+    // == fields ==
     private final Random random = new Random();
 
-    private int maxNumber = 100;
+    @Autowired
+    private int maxNumber;
 
-    // == public methods
+    // == public methods ==
     @Override
     public int next() {
         return random.nextInt(maxNumber);

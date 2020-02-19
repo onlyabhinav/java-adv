@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-@Import(GameConfig.class)
+@Import({GameConfig.class})
 @ComponentScan(basePackages = "dev.abhinav")
 public class AppConfig {
 

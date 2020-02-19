@@ -5,9 +5,11 @@ import dev.abhinav.circulardependency.DemoClassA;
 import dev.abhinav.circulardependency.DemoClassB;
 import dev.abhinav.game.Game;
 import dev.abhinav.game.NumberGenerator;
+import dev.abhinav.game.config.AppConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainCoreApp {
@@ -22,10 +24,14 @@ public class MainCoreApp {
 
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(CONFIG_LOCATION);
 
+        // required many changes. Use MainCoreApp2 Class instead.
+        //ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
+
         // Get "numberGenerator" from the Spring Context
         NumberGenerator numGen = context.getBean("numberGenerator", NumberGenerator.class);
 
-        log.info(" Random number = {} " ,numGen.next() );
+        log.info(" Random number = {} ", numGen.next());
 
         // Get "game" from the Spring Context
         Game game = context.getBean("game", Game.class);
